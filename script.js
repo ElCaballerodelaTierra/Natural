@@ -34,6 +34,59 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
     
+    // Mobile Menu Toggle
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    const menuIcon = mobileMenu ? mobileMenu.querySelector('i') : null;
+
+    if (mobileMenu && navLinks) {
+        const toggleMenu = (e) => {
+            if (e) {
+                e.stopPropagation();
+            }
+            const isActive = navLinks.classList.toggle('active');
+            mobileMenu.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+            
+            if (menuIcon) {
+                if (isActive) {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-times');
+                } else {
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
+            }
+        };
+
+        const closeMenu = () => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenu.setAttribute('aria-expanded', 'false');
+                if (menuIcon) {
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
+            }
+        };
+
+        mobileMenu.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking on a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Close menu when tapping or clicking outside (iOS Safari & desktop)
+        const handleOutsideClick = (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenu.contains(e.target)) {
+                closeMenu();
+            }
+        };
+
+        document.addEventListener('click', handleOutsideClick);
+        document.addEventListener('touchend', handleOutsideClick, { passive: true });
+    }
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
