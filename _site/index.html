@@ -46,7 +46,7 @@
             <div class="container hero-content">
                 <div class="hero-text fade-in">
                     <span class="badge">Cosmética Artesanal Consciente</span>
-                    <h1>Shampoo Sólido de <span>Romero</span></h1>
+                    <h1>Shampoo Sólido de <span id="rotating-word">Romero</span></h1>
                     <p>Cuida tu cabello y el planeta con nuestra fórmula natural. Estimula el crecimiento, previene la caída y aporta un brillo espectacular de manera 100% ecológica.</p>
                     <div class="hero-buttons">
                         <a href="#jabones" class="btn btn-secondary">Ver Jabones</a>
@@ -96,7 +96,7 @@
                 <!-- Category Filters -->
                 <div class="soap-filters fade-in" role="tablist" aria-label="Filtrar jabones">
                     <button type="button" class="soap-filter-btn active" data-filter="all" role="tab" aria-selected="true">
-                        <i class="fas fa-border-all"></i> Todos (3)
+                        <i class="fas fa-border-all"></i> Todos (4)
                     </button>
                     <button type="button" class="soap-filter-btn" data-filter="carbon" role="tab" aria-selected="false">
                         <i class="fas fa-seedling"></i> Carbón con Menta
@@ -107,6 +107,9 @@
                     <button type="button" class="soap-filter-btn" data-filter="azufre" role="tab" aria-selected="false">
                         <i class="fas fa-shield-virus"></i> Azufre Terapéutico
                     </button>
+                    <button type="button" class="soap-filter-btn" data-filter="romero" role="tab" aria-selected="false">
+                        <i class="fas fa-leaf"></i> Romero Capilar
+                    </button>
                 </div>
 
                 <!-- Soaps Grid -->
@@ -115,8 +118,8 @@
                     <article class="soap-card slide-up" data-category="carbon" id="card-carbon">
                         <div class="soap-card-media">
                             <span class="soap-tag tag-carbon"><i class="fas fa-magnet"></i> Purificante & Detox</span>
-                            <span class="soap-weight-badge"><i class="fas fa-weight-hanging"></i> Barra &gt; 100g</span>
-                            <img src="assets/jabon_carbon.jpg" alt="Jabón de Carbón con Menta Natural Bio Aloe" loading="lazy">
+
+                            <img src="assets/jabon-carbon.jpg" alt="Jabón de Carbón con Menta Natural Bio Aloe" loading="lazy">
                             <button type="button" class="btn-quick-preview" data-product="carbon" aria-label="Ver detalles del Jabón de Carbón con Menta">
                                 <i class="fas fa-search-plus"></i> Ver Detalles
                             </button>
@@ -158,8 +161,8 @@
                     <article class="soap-card slide-up" data-category="perejil" id="card-perejil" style="animation-delay: 0.15s;">
                         <div class="soap-card-media">
                             <span class="soap-tag tag-perejil"><i class="fas fa-sun"></i> Extra Aclarante</span>
-                            <span class="soap-weight-badge"><i class="fas fa-weight-hanging"></i> Barra ~ 80g</span>
-                            <img src="assets/jabon_perejil.jpg" alt="Jabón de Perejil Natural Bio Aloe con nódulos masajeadores" loading="lazy">
+
+                            <img src="assets/jabon-perejil.jpg" alt="Jabón de Perejil Natural Bio Aloe con nódulos masajeadores" loading="lazy">
                             <button type="button" class="btn-quick-preview" data-product="perejil" aria-label="Ver detalles del Jabón de Perejil">
                                 <i class="fas fa-search-plus"></i> Ver Detalles
                             </button>
@@ -200,9 +203,9 @@
                     <!-- Product 3: Jabón de Azufre -->
                     <article class="soap-card slide-up" data-category="azufre" id="card-azufre" style="animation-delay: 0.3s;">
                         <div class="soap-card-media">
-                            <span class="soap-tag tag-azufre"><i class="fas fa-shield-virus"></i> Terapéutico & Antiacné</span>
-                            <span class="soap-weight-badge"><i class="fas fa-weight-hanging"></i> Contenido 100g</span>
-                            <img src="assets/jabon_azufre.jpg" alt="Jabón de Azufre Natural Bio Aloe para acné y afecciones cutáneas" loading="lazy">
+                            <span class="soap-tag tag-azufre"><i class="fas fa-shield-virus"></i> Antiacné</span>
+
+                            <img src="assets/jabon-azufre.jpg" alt="Jabón de Azufre Natural Bio Aloe para acné y afecciones cutáneas" loading="lazy">
                             <button type="button" class="btn-quick-preview" data-product="azufre" aria-label="Ver detalles del Jabón de Azufre">
                                 <i class="fas fa-search-plus"></i> Ver Detalles
                             </button>
@@ -239,6 +242,49 @@
                             </div>
                         </div>
                     </article>
+
+                    <!-- Product 4: Jabón de Romero -->
+                    <article class="soap-card slide-up" data-category="romero" id="card-romero" style="animation-delay: 0.45s;">
+                        <div class="soap-card-media">
+                            <span class="soap-tag tag-romero"><i class="fas fa-leaf"></i> Estimulante Capilar</span>
+
+                            <img src="assets/hero_shampoo.jpg" alt="Jabón de Romero Natural Bio Aloe estimulante capilar" loading="lazy">
+                            <button type="button" class="btn-quick-preview" data-product="romero" aria-label="Ver detalles del Jabón de Romero">
+                                <i class="fas fa-search-plus"></i> Ver Detalles
+                            </button>
+                        </div>
+                        <div class="soap-card-body">
+                            <div class="soap-header-row">
+                                <h3>Jabón de Romero</h3>
+                                <div class="soap-price-tag">
+                                    <span class="currency">$</span><span class="amount">59</span><span class="decimals">.00</span>
+                                    <span class="currency-code">MXN</span>
+                                </div>
+                            </div>
+                            <p class="soap-headline"><strong>Revitaliza y fortalece:</strong> El poder del romero activa la circulación capilar para un cabello más fuerte, brillante y saludable.</p>
+
+                            <div class="soap-highlight-box highlight-romero">
+                                <i class="fas fa-seedling"></i>
+                                <span><strong>Acción Estimulante:</strong> Activa los folículos pilosos y reduce la caída desde la primera aplicación.</span>
+                            </div>
+
+                            <ul class="soap-benefit-list">
+                                <li><i class="fas fa-check-circle"></i> Estimula el crecimiento y reduce la caída</li>
+                                <li><i class="fas fa-check-circle"></i> Mejora la circulación en el cuero cabelludo</li>
+                                <li><i class="fas fa-check-circle"></i> Aporta brillo, fuerza y vitalidad al cabello</li>
+                                <li><i class="fas fa-check-circle"></i> Fórmula 100% natural, sin sulfatos ni parabenos</li>
+                            </ul>
+
+                            <div class="soap-card-actions">
+                                <a href="https://wa.me/523311741166?text=Hola%20Natural%20Bio%20Aloe,%20me%20gustar%C3%ADa%20comprar%20el%20Jab%C3%B3n%20de%20Romero%20($59%20MXN)" target="_blank" rel="noopener noreferrer" class="btn btn-soap-buy">
+                                    <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                                </a>
+                                <button type="button" class="btn btn-soap-info" data-product="romero">
+                                    <i class="fas fa-info-circle"></i> Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -247,25 +293,20 @@
         <section id="beneficios" class="benefits section-padding">
             <div class="container">
                 <div class="section-title fade-in">
-                    <h2>El poder del Romero en tu cabello</h2>
-                    <p>Nuestro shampoo sólido está diseñado para transformar tu rutina capilar con los beneficios de la naturaleza.</p>
+                    <h2>El poder de la naturaleza en tu cabello</h2>
+                    <p>Nuestros shampoos sólidos están diseñados para transformar tu rutina capilar con los beneficios de la naturaleza.</p>
                 </div>
                 
                 <div class="benefits-grid">
                     <div class="benefit-card slide-up">
-                        <div class="icon-wrapper color-green">
-                            <i class="fas fa-seedling"></i>
+                        <div style="display:flex; gap:0.6rem; justify-content:center; margin-bottom:0.25rem;">
+                            <div class="icon-wrapper color-green" style="margin:0;">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            
                         </div>
-                        <h3>Estimula el Crecimiento</h3>
-                        <p>El romero mejora la circulación en el cuero cabelludo, favoreciendo un crecimiento fuerte y saludable.</p>
-                    </div>
-                    
-                    <div class="benefit-card slide-up" style="animation-delay: 0.1s;">
-                        <div class="icon-wrapper color-pink">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Previene la Caída</h3>
-                        <p>Fortalece los folículos pilosos desde la raíz, reduciendo significativamente la caída del cabello.</p>
+                        <h3>Estimula el Crecimiento y Previene la Caída</h3>
+                        <p>Mejoran la circulación en el cuero cabelludo para un crecimiento fuerte y nuestros activos naturales fortalecen los folículos desde la raíz.</p>
                     </div>
                     
                     <div class="benefit-card slide-up" style="animation-delay: 0.2s;">
@@ -300,12 +341,7 @@
                     <p>En <strong>Natural Bio Aloe</strong> creemos en la cosmética artesanal consciente. Cada barra de shampoo es elaborada a mano con ingredientes de la más alta calidad.</p>
                     
                     <ul class="ingredients-list">
-                        <li>
-                            <i class="fas fa-check-circle color-green"></i>
-                            <div>
-                                <strong>Extracto de Romero:</strong> Revitaliza y fortalece.
-                            </div>
-                        </li>
+                        
                         <li>
                             <i class="fas fa-check-circle color-green"></i>
                             <div>

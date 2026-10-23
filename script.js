@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
             weight: 'Barra de más de 100 gramos',
             badge: 'Purificante & Detox',
             badgeClass: 'tag-carbon',
-            flyerImg: 'assets/jabon_carbon.jpg',
+            flyerImg: 'assets/jabon-carbon.jpg',
             headline: '¡TIENES QUE PROBARLO!',
             description: 'Funciona como un imán atrayendo toxinas e impurezas que están dentro de la piel como la suciedad y grasa de los poros.',
             benefits: [
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             weight: 'Barra de 80 gramos aprox. (Relieve Masajeador)',
             badge: 'Extra Aclarante',
             badgeClass: 'tag-perejil',
-            flyerImg: 'assets/jabon_perejil.jpg',
+            flyerImg: 'assets/jabon-perejil.jpg',
             headline: 'JABÓN DE PEREJIL - Extra aclarante para zonas difíciles',
             description: 'Especialmente formulado para aclarar zonas difíciles como codos, axilas y rodillas. Aprovecha el poder antioxidante del perejil para restaurar el tono natural de la piel.',
             benefits: [
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
             weight: 'Contenido 100 gramos',
             badge: 'Terapéutico & Antiacné',
             badgeClass: 'tag-azufre',
-            flyerImg: 'assets/jabon_azufre.jpg',
+            flyerImg: 'assets/jabon-azufre.jpg',
             headline: 'EL JABÓN DE AZUFRE - Cuidado dermatológico natural',
             description: 'El azufre siempre ha sido un mineral natural muy popular en el cuidado de la piel y los tratamientos contra: El acné, la dermatitis o la psoriasis.',
             benefits: [
@@ -188,6 +188,32 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             socialTag: '@BIO_ALOE_2327',
             whatsappMsg: 'Hola Natural Bio Aloe, me gustaría pedir el Jabón de Azufre ($55 MXN).'
+        },
+        romero: {
+            id: 'romero',
+            name: 'Jabón de Romero',
+            price: '59,00 MXN',
+            weight: 'Barra 100 gramos',
+            badge: 'Estimulante Capilar',
+            badgeClass: 'tag-romero',
+            flyerImg: 'assets/hero_shampoo.jpg',
+            headline: 'JABÓN DE ROMERO - Revitaliza y fortalece tu cabello',
+            description: 'El romero es reconocido como uno de los mejores estimulantes capilares de la naturaleza. Activa la circulación del cuero cabelludo, fortalece los folículos desde la raíz y le devuelve al cabello su vitalidad natural.',
+            benefits: [
+                'Estimula el crecimiento del cabello desde la raíz',
+                'Reduce la caída y fortalece los folículos pilosos',
+                'Mejora la circulación sanguínea en el cuero cabelludo',
+                'Aporta brillo, fuerza y suavidad naturales',
+                'Fórmula 100% natural, sin sulfatos ni parabenos',
+                'Ideal para cabello debilitado, opaco o con caída',
+                'Aroma herbal revitalizante de romero puro'
+            ],
+            extraNotes: [
+                { icon: 'fas fa-seedling', title: 'Acción Estimulante:', text: 'Activa los folículos pilosos y promueve un crecimiento más denso y fuerte.' },
+                { icon: 'fas fa-leaf', title: 'Pureza Natural:', text: 'Sin ingredientes sintéticos. Solo el poder puro del romero botánico.' }
+            ],
+            socialTag: '@BIO_ALOE_2327',
+            whatsappMsg: 'Hola Natural Bio Aloe, me gustaría pedir el Jabón de Romero ($59 MXN).'
         }
     };
 
@@ -261,7 +287,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="modal-details-header">
                     <div class="modal-badges-row">
                         <span class="soap-tag ${product.badgeClass}">${product.badge}</span>
-                        <span class="soap-weight-badge"><i class="fas fa-weight-hanging"></i> ${product.weight}</span>
                     </div>
                     <h2 class="modal-title">${product.name}</h2>
                     <div class="modal-price-row">
@@ -342,4 +367,52 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// ── Rotating hero word ──────────────────────────────────────────────────────
+(function () {
+    const words = [
+        { text: 'Romero',  color: '' },           // default (CSS gradient colour)
+        { text: 'Carb\u00f3n', color: '#4e4e4eff' },      // negro
+        { text: 'Perejil', color: '#a35a41ff' },      // marrón
+        { text: 'Azufre',  color: '#9a710aff' },      // amarillo mostaza
+    ];
+
+    const el = document.getElementById('rotating-word');
+    if (!el) return;
+
+    let current = 0;
+
+    // Apply transition style once
+    el.style.transition = 'opacity 0.6s ease, color 0.6s ease';
+
+    setInterval(() => {
+        // Fade out
+        el.style.opacity = '0';
+
+        setTimeout(() => {
+            current = (current + 1) % words.length;
+            const w = words[current];
+            el.textContent = w.text;
+
+            if (w.color) {
+                el.style.color = w.color;
+                el.style.webkitTextFillColor = w.color;   // override gradient clip if any
+                el.style.backgroundImage = 'none';
+                el.style.backgroundClip = 'unset';
+                el.style.webkitBackgroundClip = 'unset';
+            } else {
+                // Restore original gradient/colour from CSS
+                el.style.color = '';
+                el.style.webkitTextFillColor = '';
+                el.style.backgroundImage = '';
+                el.style.backgroundClip = '';
+                el.style.webkitBackgroundClip = '';
+            }
+
+            // Fade back in
+            el.style.opacity = '1';
+        }, 380); // slightly longer than the CSS transition
+    }, 2000); // total cycle: 1.5 s (visible) + 0.38 s (transition) ≈ 2 s per word
+})();
+
 

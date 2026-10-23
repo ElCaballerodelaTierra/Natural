@@ -703,6 +703,19 @@ header.scrolled {
 }
 .highlight-azufre i { color: #FB8C00; }
 
+.tag-romero {
+    background-color: rgba(27, 94, 32, 0.95);
+    color: #F1F8E9;
+    border: 1px solid rgba(165, 214, 167, 0.4);
+}
+
+.highlight-romero {
+    background-color: #F1F8E9;
+    border-left: 4px solid #388E3C;
+    color: #1B5E20;
+}
+.highlight-romero i { color: #2E7D32; }
+
 /* Benefits List */
 .soap-benefit-list {
     list-style: none;
