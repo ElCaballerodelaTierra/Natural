@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natural Bio Aloe | Shampoo Sólido de Romero</title>
-    <meta name="description" content="Descubre el shampoo sólido de romero de Natural Bio Aloe. Cosmética artesanal consciente para un cabello fuerte y saludable.">
-    <link rel="stylesheet" href="styles.css?v=1.1">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <title>Natural Bio Aloe | Jabones Artesanales y Shampoo Sólido</title>
+    <meta name="description" content="Cosmética artesanal consciente de Natural Bio Aloe. Descubre nuestros jabones naturales de Carbón con Menta, Perejil Aclarante y Azufre, y nuestro shampoo sólido ecológico.">
+    <link rel="stylesheet" href="styles.css?v=1.3">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -21,6 +21,7 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#jabones">Jabones</a></li>
                     <li><a href="#beneficios">Beneficios</a></li>
                     <li><a href="#ingredientes">Ingredientes</a></li>
                     <li><a href="#uso">¿Cómo usarlo?</a></li>
@@ -48,7 +49,7 @@
                     <h1>Shampoo Sólido de <span>Romero</span></h1>
                     <p>Cuida tu cabello y el planeta con nuestra fórmula natural. Estimula el crecimiento, previene la caída y aporta un brillo espectacular de manera 100% ecológica.</p>
                     <div class="hero-buttons">
-                        <a href="#beneficios" class="btn btn-secondary">Descubre más</a>
+                        <a href="#jabones" class="btn btn-secondary">Ver Jabones</a>
                         <a href="https://wa.me/523311741166" target="_blank" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
                     </div>
                 </div>
@@ -57,6 +58,187 @@
                     <div class="floating-badge">
                         <i class="fas fa-leaf"></i> 100% Natural
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soaps Catalog Section -->
+        <section id="jabones" class="soaps-section section-padding bg-light">
+            <div class="container">
+                <div class="section-title fade-in">
+                    <div class="sub-badge-wrapper">
+                        <span class="sub-badge"><i class="fas fa-spa"></i> Catálogo Artesanal</span>
+                    </div>
+                    <h2>Nuestros Jabones Naturales</h2>
+                    <p>Fórmulas botánicas y terapéuticas elaboradas a mano para transformar tu piel. Descubre el poder del carbón activado, el perejil aclarante y el azufre medicinal.</p>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="catalog-trust-badges fade-in">
+                    <div class="trust-badge-item">
+                        <i class="fas fa-leaf color-green"></i>
+                        <span>100% Ingredientes Naturales</span>
+                    </div>
+                    <div class="trust-badge-item">
+                        <i class="fas fa-ban color-pink"></i>
+                        <span>Sin Aromas ni Colorantes Artificiales</span>
+                    </div>
+                    <div class="trust-badge-item">
+                        <i class="fas fa-hands color-yellow"></i>
+                        <span>Elaboración Artesanal Consciente</span>
+                    </div>
+                    <div class="trust-badge-item">
+                        <i class="fas fa-heart color-teal"></i>
+                        <span>Suave con Todo Tipo de Piel</span>
+                    </div>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="soap-filters fade-in" role="tablist" aria-label="Filtrar jabones">
+                    <button type="button" class="soap-filter-btn active" data-filter="all" role="tab" aria-selected="true">
+                        <i class="fas fa-border-all"></i> Todos (3)
+                    </button>
+                    <button type="button" class="soap-filter-btn" data-filter="carbon" role="tab" aria-selected="false">
+                        <i class="fas fa-seedling"></i> Carbón con Menta
+                    </button>
+                    <button type="button" class="soap-filter-btn" data-filter="perejil" role="tab" aria-selected="false">
+                        <i class="fas fa-sun"></i> Perejil Aclarante
+                    </button>
+                    <button type="button" class="soap-filter-btn" data-filter="azufre" role="tab" aria-selected="false">
+                        <i class="fas fa-shield-virus"></i> Azufre Terapéutico
+                    </button>
+                </div>
+
+                <!-- Soaps Grid -->
+                <div class="soaps-grid">
+                    <!-- Product 1: Jabón de Carbón con Menta -->
+                    <article class="soap-card slide-up" data-category="carbon" id="card-carbon">
+                        <div class="soap-card-media">
+                            <span class="soap-tag tag-carbon"><i class="fas fa-magnet"></i> Purificante & Detox</span>
+                            <span class="soap-weight-badge"><i class="fas fa-weight-hanging"></i> Barra &gt; 100g</span>
+                            <img src="assets/jabon_carbon.jpg" alt="Jabón de Carbón con Menta Natural Bio Aloe" loading="lazy">
+                            <button type="button" class="btn-quick-preview" data-product="carbon" aria-label="Ver detalles del Jabón de Carbón con Menta">
+                                <i class="fas fa-search-plus"></i> Ver Detalles
+                            </button>
+                        </div>
+                        <div class="soap-card-body">
+                            <div class="soap-header-row">
+                                <h3>Jabón de Carbón con Menta</h3>
+                                <div class="soap-price-tag">
+                                    <span class="currency">$</span><span class="amount">59</span><span class="decimals">.00</span>
+                                    <span class="currency-code">MXN</span>
+                                </div>
+                            </div>
+                            <p class="soap-headline"><strong>¡Tienes que probarlo!</strong> Atrae toxinas e impurezas de la piel como un imán mientras purifica y refresca profundamente.</p>
+                            
+                            <div class="soap-highlight-box highlight-carbon">
+                                <i class="fas fa-feather-alt"></i>
+                                <span><strong>Efecto Lifting:</strong> Tensa los poros visibles de la piel y reduce notablemente inflamación y rojez.</span>
+                            </div>
+
+                            <ul class="soap-benefit-list">
+                                <li><i class="fas fa-check-circle"></i> Suaviza y regenera la barrera de la piel</li>
+                                <li><i class="fas fa-check-circle"></i> Elimina puntos negros, espinillas y suciedad</li>
+                                <li><i class="fas fa-check-circle"></i> Cierra poros y controla el exceso de grasa</li>
+                                <li><i class="fas fa-check-circle"></i> Astringente natural muy útil en acné</li>
+                            </ul>
+
+                            <div class="soap-card-actions">
+                                <a href="https://wa.me/523311741166?text=Hola%20Natural%20Bio%20Aloe,%20me%20gustar%C3%ADa%20comprar%20el%20Jab%C3%B3n%20de%20Carb%C3%B3n%20con%20Menta%20($59%20MXN)" target="_blank" rel="noopener noreferrer" class="btn btn-soap-buy">
+                                    <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                                </a>
+                                <button type="button" class="btn btn-soap-info" data-product="carbon">
+                                    <i class="fas fa-info-circle"></i> Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 2: Jabón de Perejil -->
+                    <article class="soap-card slide-up" data-category="perejil" id="card-perejil" style="animation-delay: 0.15s;">
+                        <div class="soap-card-media">
+                            <span class="soap-tag tag-perejil"><i class="fas fa-sun"></i> Extra Aclarante</span>
+                            <span class="soap-weight-badge"><i class="fas fa-weight-hanging"></i> Barra ~ 80g</span>
+                            <img src="assets/jabon_perejil.jpg" alt="Jabón de Perejil Natural Bio Aloe con nódulos masajeadores" loading="lazy">
+                            <button type="button" class="btn-quick-preview" data-product="perejil" aria-label="Ver detalles del Jabón de Perejil">
+                                <i class="fas fa-search-plus"></i> Ver Detalles
+                            </button>
+                        </div>
+                        <div class="soap-card-body">
+                            <div class="soap-header-row">
+                                <h3>Jabón de Perejil</h3>
+                                <div class="soap-price-tag">
+                                    <span class="currency">$</span><span class="amount">59</span><span class="decimals">.00</span>
+                                    <span class="currency-code">MXN</span>
+                                </div>
+                            </div>
+                            <p class="soap-headline"><strong>Extra aclarante botánico:</strong> Diseñado para zonas difíciles (codos, axilas, rodillas) y manchas provocadas por sol o paño.</p>
+                            
+                            <div class="soap-highlight-box highlight-perejil">
+                                <i class="fas fa-stopwatch"></i>
+                                <span><strong>Modo de aplicación:</strong> Dejar actuar en la zona a aclarar durante 15 minutos y enjuagar con abundante agua.</span>
+                            </div>
+
+                            <ul class="soap-benefit-list">
+                                <li><i class="fas fa-check-circle"></i> Rico en Vitamina C natural: estimula colágeno</li>
+                                <li><i class="fas fa-check-circle"></i> Cicatrizante, reparador y potente antioxidante</li>
+                                <li><i class="fas fa-check-circle"></i> Ideal para combatir manchas de sol, paño, etc.</li>
+                                <li><i class="fas fa-check-circle"></i> Sin ningún aroma ni colorante artificial</li>
+                            </ul>
+
+                            <div class="soap-card-actions">
+                                <a href="https://wa.me/523311741166?text=Hola%20Natural%20Bio%20Aloe,%20me%20gustar%C3%ADa%20comprar%20el%20Jab%C3%B3n%20de%20Perejil%20Extra%20Aclarante%20($59%20MXN)" target="_blank" rel="noopener noreferrer" class="btn btn-soap-buy">
+                                    <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                                </a>
+                                <button type="button" class="btn btn-soap-info" data-product="perejil">
+                                    <i class="fas fa-info-circle"></i> Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 3: Jabón de Azufre -->
+                    <article class="soap-card slide-up" data-category="azufre" id="card-azufre" style="animation-delay: 0.3s;">
+                        <div class="soap-card-media">
+                            <span class="soap-tag tag-azufre"><i class="fas fa-shield-virus"></i> Terapéutico & Antiacné</span>
+                            <span class="soap-weight-badge"><i class="fas fa-weight-hanging"></i> Contenido 100g</span>
+                            <img src="assets/jabon_azufre.jpg" alt="Jabón de Azufre Natural Bio Aloe para acné y afecciones cutáneas" loading="lazy">
+                            <button type="button" class="btn-quick-preview" data-product="azufre" aria-label="Ver detalles del Jabón de Azufre">
+                                <i class="fas fa-search-plus"></i> Ver Detalles
+                            </button>
+                        </div>
+                        <div class="soap-card-body">
+                            <div class="soap-header-row">
+                                <h3>Jabón de Azufre</h3>
+                                <div class="soap-price-tag">
+                                    <span class="currency">$</span><span class="amount">55</span><span class="decimals">.00</span>
+                                    <span class="currency-code">MXN</span>
+                                </div>
+                            </div>
+                            <p class="soap-headline"><strong>Mineral natural medicinal:</strong> El mineral tradicional más reconocido en tratamientos de cuidado intensivo dérmico.</p>
+                            
+                            <div class="soap-highlight-box highlight-azufre">
+                                <i class="fas fa-shield-alt"></i>
+                                <span><strong>Triple acción:</strong> Propiedades desinfectantes, astringentes y antiinflamatorias comprobadas.</span>
+                            </div>
+
+                            <ul class="soap-benefit-list">
+                                <li><i class="fas fa-check-circle"></i> Gran aliado contra el acné, dermatitis o psoriasis</li>
+                                <li><i class="fas fa-check-circle"></i> Desinfecta a profundidad y combate bacterias</li>
+                                <li><i class="fas fa-check-circle"></i> Astringente que regula grasa sin agredir la piel</li>
+                                <li><i class="fas fa-check-circle"></i> Calma la irritación e inflamación cutánea</li>
+                            </ul>
+
+                            <div class="soap-card-actions">
+                                <a href="https://wa.me/523311741166?text=Hola%20Natural%20Bio%20Aloe,%20me%20gustar%C3%ADa%20comprar%20el%20Jab%C3%B3n%20de%20Azufre%20($55%20MXN)" target="_blank" rel="noopener noreferrer" class="btn btn-soap-buy">
+                                    <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                                </a>
+                                <button type="button" class="btn btn-soap-info" data-product="azufre">
+                                    <i class="fas fa-info-circle"></i> Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -180,12 +362,25 @@
         <!-- Call to Action -->
         <section class="cta-section fade-in">
             <div class="container cta-container">
-                <h2>¿Lista para darle a tu cabello el cuidado que merece?</h2>
-                <p>Únete a la revolución de la cosmética consciente y prueba nuestro Shampoo Sólido de Romero.</p>
+                <h2>¿Lista para darle a tu piel y cabello el cuidado que merecen?</h2>
+                <p>Únete a la revolución de la cosmética consciente y prueba nuestros jabones artesanales y shampoo sólido.</p>
                 <a href="https://wa.me/523311741166" target="_blank" class="btn btn-primary btn-large"><i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp</a>
             </div>
         </section>
     </main>
+
+    <!-- Product Details Modal Dialog -->
+    <div id="soap-modal" class="soap-modal" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-window">
+            <button type="button" class="modal-close" id="modal-close" aria-label="Cerrar detalles del producto">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modal-body">
+                <!-- Dynamically populated by script.js -->
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -203,14 +398,17 @@
                 <h3>Enlaces Rápidos</h3>
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#jabones">Jabones Artesanales</a></li>
+                    <li><a href="#beneficios">Beneficios Shampoo</a></li>
                     <li><a href="#ingredientes">Ingredientes</a></li>
+                    <li><a href="#uso">¿Cómo usarlo?</a></li>
                 </ul>
             </div>
             
             <div class="footer-contact">
                 <h3>Contacto</h3>
-                <p><i class="fab fa-whatsapp"></i> 33 1174 1166</p>
+                <p><a href="https://wa.me/523311741166" target="_blank" style="color:inherit;"><i class="fab fa-whatsapp"></i> 33 1174 1166</a></p>
+                <p><a href="https://www.instagram.com/bio_aloe_2327/" target="_blank" style="color:inherit;"><i class="fab fa-instagram"></i> @bio_aloe_2327</a></p>
                 <p><i class="fab fa-facebook"></i> Natural Bio Aloe</p>
             </div>
         </div>
@@ -219,6 +417,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=1.1"></script>
+    <script src="script.js?v=1.3"></script>
 </body>
 </html>
